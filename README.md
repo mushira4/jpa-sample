@@ -1,4 +1,4 @@
-# jpa-ejblite
+# JPA-EJB Lite
 
 Simple examples of JPA + EJB Lite. 
 
