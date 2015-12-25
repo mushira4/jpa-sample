@@ -12,7 +12,6 @@ public class ContaDao {
 
 	public ContaDao(EntityManager entityManager) {
 		this.entityManager = entityManager;
-	
 	}
 	
 	public Conta busca (int id){

@@ -13,9 +13,13 @@ public class Conta {
 	@Id
 	@GeneratedValue
 	private int id;
+	
 	private String titular;
+	
 	private String agencia;
+	
 	private String numero;
+	
 	private String banco;
 	
 	@OneToMany(mappedBy="conta")

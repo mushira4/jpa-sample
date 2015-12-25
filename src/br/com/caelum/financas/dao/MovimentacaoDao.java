@@ -31,7 +31,6 @@ public class MovimentacaoDao {
 
 	public void remove(Movimentacao movimentacao) {
 		manager.remove(movimentacao);
-
 	}
 
 }

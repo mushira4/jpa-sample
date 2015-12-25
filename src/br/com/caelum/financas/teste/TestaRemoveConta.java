@@ -3,7 +3,6 @@ package br.com.caelum.financas.teste;
 import javax.persistence.EntityManager;
 
 import br.com.caelum.financas.dao.ContaDao;
-import br.com.caelum.financas.dao.ContaDao;
 import br.com.caelum.financas.modelo.Conta;
 import br.com.caelum.financas.util.JPAUtil;
 
