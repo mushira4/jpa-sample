@@ -1,6 +1,6 @@
-# JPA + EJB Lite
+# JPA
 
-Simple examples of JPA + EJB Lite. 
+Simple examples of JPA. 
 
 Here you will see how to:
 - Create entities;
