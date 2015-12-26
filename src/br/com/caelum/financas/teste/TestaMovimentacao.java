@@ -5,26 +5,26 @@ import java.util.Calendar;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.dao.ContaDao;
-import br.com.caelum.financas.modelo.Conta;
-import br.com.caelum.financas.modelo.Movimentacao;
-import br.com.caelum.financas.modelo.TipoMovimentacao;
+import br.com.caelum.financas.dao.AccountDAO;
+import br.com.caelum.financas.modelo.Account;
+import br.com.caelum.financas.modelo.Transaction;
+import br.com.caelum.financas.modelo.TransactionType;
 import br.com.caelum.financas.util.JPAUtil;
 
 public class TestaMovimentacao {
 	public static void main(String[] args) {
 		EntityManager entityManager = JPAUtil.getEntityManager();
 		
-		ContaDao contaDao = new ContaDao(entityManager);
+		AccountDAO contaDao = new AccountDAO(entityManager);
 
-		Conta conta = contaDao.busca(2);
+		Account conta = contaDao.find(2);
 		
-		Movimentacao movimentacao = new Movimentacao();
-		movimentacao.setConta(conta);
-		movimentacao.setData(Calendar.getInstance());
-		movimentacao.setDescricao("Descritivo");
-		movimentacao.setTipoMovimentacao(TipoMovimentacao.ENTRADA);
-		movimentacao.setValor(new BigDecimal("1000.00"));
+		Transaction movimentacao = new Transaction();
+		movimentacao.setAccount(conta);
+		movimentacao.setDate(Calendar.getInstance());
+		movimentacao.setDescription("Descritivo");
+		movimentacao.setTransactionType(TransactionType.ENTRADA);
+		movimentacao.setValue(new BigDecimal("1000.00"));
 		
 		entityManager.getTransaction().begin();
 		entityManager.persist(movimentacao);

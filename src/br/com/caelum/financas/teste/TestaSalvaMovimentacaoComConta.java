@@ -2,8 +2,8 @@ package br.com.caelum.financas.teste;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.dao.MovimentacaoDao;
-import br.com.caelum.financas.modelo.Movimentacao;
+import br.com.caelum.financas.dao.TransactionDAO;
+import br.com.caelum.financas.modelo.Transaction;
 import br.com.caelum.financas.util.JPAUtil;
 
 public class TestaSalvaMovimentacaoComConta {
@@ -12,8 +12,8 @@ public class TestaSalvaMovimentacaoComConta {
 		EntityManager entityManager = JPAUtil.getEntityManager();
 		entityManager.getTransaction().begin();
 		
-		MovimentacaoDao movimentacaoDao = new MovimentacaoDao(entityManager);
-		Movimentacao movimentacao = new Movimentacao();
+		TransactionDAO movimentacaoDao = new TransactionDAO(entityManager);
+		Transaction movimentacao = new Transaction();
 		movimentacaoDao.adiciona(movimentacao);
 		
 		entityManager.getTransaction().commit();

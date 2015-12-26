@@ -1,5 +1,5 @@
 package br.com.caelum.financas.modelo;
 
-public enum TipoMovimentacao {
+public enum TransactionType {
 	ENTRADA, SAIDA
 }

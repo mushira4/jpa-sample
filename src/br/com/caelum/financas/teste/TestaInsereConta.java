@@ -2,24 +2,24 @@ package br.com.caelum.financas.teste;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.dao.ContaDao;
-import br.com.caelum.financas.modelo.Conta;
+import br.com.caelum.financas.dao.AccountDAO;
+import br.com.caelum.financas.modelo.Account;
 import br.com.caelum.financas.util.JPAUtil;
 
 public class TestaInsereConta {
 	public static void main(String[] args) {
 		EntityManager manager = JPAUtil.getEntityManager();
 
-		ContaDao contaDao = new ContaDao(manager);
+		AccountDAO contaDao = new AccountDAO(manager);
 		
-		Conta conta = new Conta();
-		conta.setTitular("Jose Roberto");
-		conta.setBanco("Banco do Brasil");
-		conta.setNumero("12345-6");
-		conta.setAgencia("099");
+		Account conta = new Account();
+		conta.setOwner("Jose Roberto");
+		conta.setBankName("Banco do Brasil");
+		conta.setNumber("12345-6");
+		conta.setAgency("099");
 		
 		manager.getTransaction().begin();
-		contaDao.adiciona(conta);
+		contaDao.add(conta);
 		manager.getTransaction().commit();
 		manager.close();
 		

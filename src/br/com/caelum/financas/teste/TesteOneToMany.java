@@ -4,17 +4,17 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.modelo.Conta;
-import br.com.caelum.financas.modelo.Movimentacao;
+import br.com.caelum.financas.modelo.Account;
+import br.com.caelum.financas.modelo.Transaction;
 import br.com.caelum.financas.util.JPAUtil;
 
-public class TesteOneToManey {
+public class TesteOneToMany {
 	public static void main(String[] args) {
 		EntityManager manager = JPAUtil.getEntityManager();
-		Conta c1 = manager.find(Conta.class, 2);
-		List<Movimentacao> movimentacoes = c1.getMovimentacoes();
+		Account c1 = manager.find(Account.class, 2);
+		List<Transaction> transactions = c1.getTransactions();
 
-		for(Movimentacao movimentacao : movimentacoes  ){
+		for(Transaction movimentacao : transactions){
 			System.out.println(movimentacao);
 		}
 		
