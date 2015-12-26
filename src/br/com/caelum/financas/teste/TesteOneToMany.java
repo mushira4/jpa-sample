@@ -8,7 +8,7 @@ import br.com.caelum.financas.modelo.Conta;
 import br.com.caelum.financas.modelo.Movimentacao;
 import br.com.caelum.financas.util.JPAUtil;
 
-public class TesteOneToManey {
+public class TesteOneToMany {
 	public static void main(String[] args) {
 		EntityManager manager = JPAUtil.getEntityManager();
 		Conta c1 = manager.find(Conta.class, 2);

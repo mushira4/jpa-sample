@@ -9,7 +9,6 @@ import br.com.caelum.financas.util.JPAUtil;
 public class TestaInsereConta {
 	public static void main(String[] args) {
 		EntityManager manager = JPAUtil.getEntityManager();
-
 		ContaDao contaDao = new ContaDao(manager);
 		
 		Conta conta = new Conta();
