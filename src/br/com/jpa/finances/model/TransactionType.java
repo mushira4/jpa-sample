@@ -1,5 +1,3 @@
 package br.com.jpa.finances.model;
 
-public enum TransactionType {
-	ENTRADA, SAIDA
-}
+public enum TransactionType { IN, OUT }

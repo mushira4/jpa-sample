@@ -15,18 +15,18 @@ public class TransactionDAO {
 		this.manager = manager;
 	}
 
-	public void adiciona(Transaction movimentacao) {
+	public void add(Transaction movimentacao) {
 		manager.persist(movimentacao);
 	}
 
-	public Transaction busca(Transaction movimentacao) {
-		TypedQuery<Transaction> query = manager.createQuery("select m from Transaction m where m.id = :idMovimentacao", Transaction.class );
-		query.setParameter("idMovimentacao", movimentacao.getId());
+	public Transaction find(Transaction movimentacao) {
+		TypedQuery<Transaction> query = manager.createQuery("select m from Transaction m where m.id = :id", Transaction.class );
+		query.setParameter("id", movimentacao.getId());
 		return query.getSingleResult();
 	}
 
-	public List<Transaction>  lista() {
-		return manager.createQuery("from Movimentcao", Transaction.class ).getResultList();
+	public List<Transaction> list() {
+		return manager.createQuery("from Transaction", Transaction.class ).getResultList();
 	}
 
 	public void remove(Transaction movimentacao) {

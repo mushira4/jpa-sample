@@ -14,7 +14,7 @@ public class TestaSalvaMovimentacaoComConta {
 		
 		TransactionDAO movimentacaoDao = new TransactionDAO(entityManager);
 		Transaction movimentacao = new Transaction();
-		movimentacaoDao.adiciona(movimentacao);
+		movimentacaoDao.add(movimentacao);
 		
 		entityManager.getTransaction().commit();
 		entityManager.close();

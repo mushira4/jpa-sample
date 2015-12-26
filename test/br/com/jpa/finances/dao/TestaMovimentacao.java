@@ -23,7 +23,7 @@ public class TestaMovimentacao {
 		movimentacao.setAccount(conta);
 		movimentacao.setDate(Calendar.getInstance());
 		movimentacao.setDescription("Descritivo");
-		movimentacao.setTransactionType(TransactionType.ENTRADA);
+		movimentacao.setTransactionType(TransactionType.IN);
 		movimentacao.setValue(new BigDecimal("1000.00"));
 		
 		entityManager.getTransaction().begin();

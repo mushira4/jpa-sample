@@ -19,7 +19,7 @@ public class AccountDAO {
 	}
 	
 	public List<Account>list(){
-		return this.entityManager.createQuery("from Conta", Account.class).getResultList();
+		return this.entityManager.createQuery("from Account", Account.class).getResultList();
 	}
 	
 	public void add(Account conta){
