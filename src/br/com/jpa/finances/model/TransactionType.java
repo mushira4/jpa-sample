@@ -1,4 +1,4 @@
-package br.com.caelum.financas.modelo;
+package br.com.jpa.finances.model;
 
 public enum TransactionType {
 	ENTRADA, SAIDA

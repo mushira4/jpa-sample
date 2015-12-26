@@ -1,10 +1,10 @@
-package br.com.caelum.financas.teste;
+package br.com.jpa.finances.dao;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.dao.AccountDAO;
-import br.com.caelum.financas.modelo.Account;
-import br.com.caelum.financas.util.JPAUtil;
+import br.com.jpa.finances.dao.AccountDAO;
+import br.com.jpa.finances.model.Account;
+import br.com.jpa.finances.util.JPAUtil;
 
 public class TestaInsereConta {
 	public static void main(String[] args) {

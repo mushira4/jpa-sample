@@ -1,12 +1,12 @@
-package br.com.caelum.financas.teste;
+package br.com.jpa.finances.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.modelo.Account;
-import br.com.caelum.financas.modelo.Transaction;
-import br.com.caelum.financas.util.JPAUtil;
+import br.com.jpa.finances.model.Account;
+import br.com.jpa.finances.model.Transaction;
+import br.com.jpa.finances.util.JPAUtil;
 
 public class TesteOneToMany {
 	public static void main(String[] args) {

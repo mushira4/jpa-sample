@@ -1,10 +1,10 @@
-package br.com.caelum.financas.dao;
+package br.com.jpa.finances.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.com.caelum.financas.modelo.Account;
+import br.com.jpa.finances.model.Account;
 
 public class AccountDAO {
 

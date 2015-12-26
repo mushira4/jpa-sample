@@ -1,4 +1,4 @@
-package br.com.caelum.financas.util;
+package br.com.jpa.finances.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

@@ -1,11 +1,11 @@
-package br.com.caelum.financas.dao;
+package br.com.jpa.finances.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-import br.com.caelum.financas.modelo.Transaction;
+import br.com.jpa.finances.model.Transaction;
 
 public class TransactionDAO {
 
