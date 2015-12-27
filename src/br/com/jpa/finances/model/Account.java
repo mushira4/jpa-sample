@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -13,18 +14,21 @@ public class Account {
 	@Id
 	@GeneratedValue
 	private int id;
-	
+
 	private String owner;
-	
+
 	private String bankName;
-	
+
 	private String agency;
-	
+
 	private String number;
 
-	@OneToMany(mappedBy="account")
+	@OneToMany(mappedBy = "account")
 	private List<Transaction> transactions;
-	
+
+	@ManyToMany(mappedBy="accounts")
+	private List<Client> clients;
+
 	public int getId() {
 		return id;
 	}
